@@ -1,0 +1,61 @@
+<html> 
+<head>
+<title>
+    Contact information
+</title>
+<link href="./validation1.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <form id="form">
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: center;">FIELD LABEL</th>
+                    <th style="text-align: center;">Field Type</th>
+                    <th style="text-align: center;">Validation rule</th>
+                    <th style="text-align: center;">RESULT</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email</td>
+                    <td><input id = "Email" type="text" /></td>
+                    <td id=rule1 style = "font-size: x-small;">*Required.
+                        Must be in the form xxx@xxx.xxx. x should be alphanumeric.</td>
+                    <td id="EmailCheck"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><input id = "Phone" type="text" /></td>
+                    <td id=rule2 style = "font-size: x-small;">*Required.
+                        Must be in the form xxx-xxx-xxxx or xxxxxxxxxx. x should be numeric.</td>
+                    <td id="PhoneCheck"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input id = "Address" type="text" /></td>
+                    <td id = rule3 style = "font-size: x-small;">*Required Must be in the form of city&state. example: Ames, IA</td>
+                    <td id="AddressCheck"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <p style="color: #fff;">*Required field = Cannot be Empty.</p>
+        <p id = hint style = "color:#FA8B74; visibility:hidden">Please follow validation rule on the top!</p>
+        <button type="button" id="Submit">Submit</button>
+    </div>
+
+</form>
+
+
+
+<script src="./validation2.js"></script>
+
+</body>
+</html>

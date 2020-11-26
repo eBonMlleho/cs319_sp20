@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Homework 4</title>
+
+  <style type="text/css">
+  	table, th, td{
+  		border: 1px solid black;
+  		border-collapse: collapse;
+  		padding: 5px;
+  	}
+  </style>
+
+</head>
+
+<body>
+	<div ng-app="myApp" ng-controller="carCtrl">
+
+		<select ng-model="select" ng-click="filt(select)" ng-options="manufacturer for manufacturer in manufacturers"></select>
+
+		<table ng-model="tableData">
+
+			<tr>
+				<th>Manufacturer</th>
+				<th>Model</th>
+				<th><button ng-click="order = !order; sort(order)">year</button></th>
+				<th>Stock</th>
+				<th>Price</th>
+				<th>Option</th>
+			</tr>
+
+			<tr ng-repeat="car in cars | orderBy: year | filter: filtManu">
+				<td>{{ car.manufacturer }}</td>
+				<td>{{ car.model }}</td>
+				<td>{{ car.year }}</td>
+				<td>{{ car.stock }}</td>
+				<td>{{ car.price | currency}}</td>
+				<td><button ng-click="car.stock=car.stock+1">Increment</button></td>
+			</tr>
+
+		</table>
+
+	</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script src="cars.js"></script>
+</body>
+</html>
