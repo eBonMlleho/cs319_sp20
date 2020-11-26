@@ -14,7 +14,7 @@ Object-oriented analysis using UML: System modeling, behavioral and structural m
 Introduction to Test-Driven Development (TDD): Unit testing, user interface testing.
 
 
-## Main Project
+## Main Projects
 Java_sever_client_threads
 
 snake_game_js
